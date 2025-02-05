@@ -10,13 +10,13 @@ pipeline {
 
     stage ('terraform-init') {
       steps {
-        sh 'terraform init'
+        sh '/opt/homebrew/bin/terraform init'
       }
     }
 
     stage ('terraform-apply') {
       steps {
-        sh 'terraform apply --auto-approve'
+        sh '/opt/homebrew/bin/terraform apply --auto-approve'
       }
     }
   }
