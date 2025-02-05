@@ -8,6 +8,13 @@ pipeline {
       }
     }
 
+    stage ('checking-the-current-workspace') {
+      steps {
+        sh 'pwd'
+        sh 'ls -l'
+      }
+    }
+
     stage ('terraform-init') {
       steps {
         sh '/opt/homebrew/bin/terraform init'
