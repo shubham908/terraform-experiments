@@ -8,10 +8,9 @@ pipeline {
       }
     }
 
-    stage ('checking-the-current-workspace') {
+    stage ('source-checkout') {
       steps {
-        sh 'pwd'
-        sh 'ls -l'
+        checkout scm
       }
     }
 
