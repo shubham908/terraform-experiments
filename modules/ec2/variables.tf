@@ -16,12 +16,8 @@ variable "name_tag" {
   default     = "my-ec2-instance"
 }
 
-output "public_ip" {
-  value       = aws_instance.my_vm.public_ip
-  description = "Public IP of the EC2 instance"
-}
-
-output "public_dns" {
-  value       = aws_instance.my_vm.public_dns
-  description = "Public DNS of the EC2 instance"
+variable "create_ec2" {
+  description = "Flag to enable the EC2 instance creation"
+  type        = bool
+  default     = false
 }
