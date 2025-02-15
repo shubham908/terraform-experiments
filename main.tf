@@ -1,4 +1,8 @@
-module "ec2" {
-  source = "./modules/ec2"
+module "codepipeline" {
+  source = "./modules/codepipeline"
+}
+
+module "codebuild" {
+  source = "./modules/codebuild"
 }
 
